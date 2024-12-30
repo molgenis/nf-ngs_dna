@@ -1,0 +1,2 @@
+externalSampleID,project,sequencer,sequencingStartDate,run,flowcell,lane,seqType,prepKit,capturingKit,analysis,barcode1,barcode2,barcode,barcodeType,Gender,sampleType,sampleProcessStepID,FirstPriority,FatherAffected,MotherAffected,FatherSampleID,MotherSampleID,condition,build,AnalysisFilter,Slice,RequestId
+1111111_123456_HG001_0000000_GS001A_WGS_000001_12348765,GS_001A-WGS_v1,,,,,,PE,PCRFree,None,DRAGEN+NGS_DNA,,,,AGI,Male,DNA,123456,False,,,,,,GRCh38,WGS_v1,WESslice_v1,000001
