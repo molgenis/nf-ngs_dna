@@ -13,4 +13,10 @@ process preprocess {
 
   template 'preprocess.sh'
 
+  stub:
+  genotypedVCF="${samples.externalSampleID}.variant.calls.genotyped.vcf"
+
+  """
+  touch "${genotyped}"
+  """
 }

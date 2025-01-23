@@ -18,4 +18,15 @@ process coverage {
 
   template 'coverage.sh'
 
+  stub:
+  coverageOutput="${samples.externalSampleID}.PseudoExome.CoverageOutput.csv"
+  coveragePerTarget="${samples.externalSampleID}.pseudoExome.coveragePerTarget.txt"
+  coverageStatistics="${samples.externalSampleID}.incl_TotalAvgCoverage_TotalPercentagebelow10x.txt"
+
+  """
+  touch "${coverageOutput}"
+  touch "${coveragePerTarget}"
+  touch "${coverageStatistics}"
+  """
+
 }

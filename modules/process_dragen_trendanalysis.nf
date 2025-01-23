@@ -8,9 +8,17 @@ output:
   tuple val(samples), path(dragenInfoCSV),path(dragenCSV)
 
 shell:
-  
+
   dragenInfoCSV="${samples.project}.Dragen_runinfo.csv"
   dragenCSV="${samples.project}.Dragen.csv"
 
   template 'process_dragen_trendanalysis.sh'
+	
+  stub:
+  dragenInfoCSV="${samples.project}.Dragen_runinfo.csv"
+  dragenCSV="${samples.project}.Dragen.csv"
+  """
+  touch "${dragenInfoCSV}"
+  touch "${dragenCSV}"
+  """
 }

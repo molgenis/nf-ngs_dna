@@ -4,17 +4,22 @@ process forcedcalls {
 	module = ['BCFtools/1.16-GCCcore-11.3.0']
 	label 'forcedcalls'
 
-  	input: 
+    input:
     tuple val(samples), path(files)
 
     output:
     tuple val(samples), path(files), path(concordanceCheckCallsVcf)
 
-  	shell:
-	concordanceCheckCallsVcf="${samples.externalSampleID}.concordanceCheckCalls.vcf"
+    shell:
+    concordanceCheckCallsVcf="${samples.externalSampleID}.concordanceCheckCalls.vcf"
 
-  	template 'forcedcalls.sh'
+    template 'forcedcalls.sh'
   
+    stub:
+    concordanceCheckCallsVcf="${samples.externalSampleID}.concordanceCheckCalls.vcf"
 
+    """
+    touch "${concordanceCheckCallsVcf}"
+    """
 
 }

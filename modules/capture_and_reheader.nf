@@ -16,4 +16,9 @@ shell:
   
   template 'capture_and_reheader.sh'
 
+  stub:
+  genotypedVCFgz="${samples.externalSampleID}.captured.vcf.gz"
+  """
+  touch "${genotypedVCFgz}"
+  """
 }
